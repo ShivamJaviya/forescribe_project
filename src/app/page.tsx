@@ -1,101 +1,153 @@
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function Home() {
+const WhyUs: React.FC = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="bg-gradient-to-br from-[#1A1B4B] via-[#893cfc] to-[#FF3366] text-white">
+      {/* Fullscreen Auto Start Video */}
+      <div className="relative w-full h-screen overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="/Images/video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 flex items-center justify-center bg-black/50">
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold text-center text-white"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Discover, optimize, and regulate
+            <br />
+            your entire Software landscape.
+          </motion.h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+
+      {/* Section 1: Join the Best */}
+      <section className="container mx-auto py-16 px-4 text-center">
+        <motion.h2
+          className="text-4xl font-bold mb-8"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          JOIN THE BEST
+        </motion.h2>
+        <p className="text-lg mb-8">
+          200+ companies worldwide manage and govern SaaS with{" "}
+          <span className="text-[#FF3366] font-bold">Forescribe</span>
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {["FLOWCODE", "DATADOG", "THB", "JBi Digital"].map((company, index) => (
+            <motion.div
+              key={index}
+              className="bg-white/10 p-6 rounded-lg shadow-lg text-white"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+            >
+              <p className="text-xl font-semibold">{company}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Section 2: Cards */}
+      <section className="container mx-auto py-16 px-4">
+        <motion.h2
+          className="text-4xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          Forescribe <span className="text-[#FF3366]">Features</span>
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Card 1 */}
+          <motion.div
+            className="bg-gradient-to-br from-[#FF3366] to-[#893cfc] p-6 rounded-lg shadow-lg text-white flex flex-col justify-between"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-xl font-bold mb-4">
+              35% or more licenses are wasted or overlap with other Apps.
+            </p>
+            <button className="mt-4 bg-white text-[#FF3366] font-semibold px-6 py-2 rounded-lg hover:bg-gray-200 transition">
+              Learn More
+            </button>
+          </motion.div>
+
+          {/* Card 2 */}
+          <motion.div
+            className="bg-gradient-to-br from-[#893cfc] to-[#1A1B4B] p-6 rounded-lg shadow-lg text-white flex flex-col justify-between"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-xl font-bold mb-4">
+              6.2 SaaS tools added every 30 days.
+              <br />
+              <span className="text-sm font-light">Source: Invision</span>
+            </p>
+            <button className="mt-4 bg-white text-[#893cfc] font-semibold px-6 py-2 rounded-lg hover:bg-gray-200 transition">
+              Learn More
+            </button>
+          </motion.div>
+
+          {/* Card 3 */}
+          <motion.div
+            className="bg-gradient-to-br from-[#FF3366] to-[#1A1B4B] p-6 rounded-lg shadow-lg text-white flex flex-col justify-between"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-xl font-bold mb-4">
+              85% of business Apps will be SaaS-based by 2025.
+              <br />
+              <span className="text-sm font-light">Source: Bettercloud</span>
+            </p>
+            <button className="mt-4 bg-white text-[#FF3366] font-semibold px-6 py-2 rounded-lg hover:bg-gray-200 transition">
+              Learn More
+            </button>
+          </motion.div>
+
+          {/* Card 4 */}
+          <motion.div
+            className="bg-gradient-to-br from-[#1A1B4B] to-[#893cfc] p-6 rounded-lg shadow-lg text-white flex flex-col justify-between"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-xl font-bold mb-4">
+              5X Organizations are more susceptible to cyber incidents through 2027
+              if they fail to centralize SaaS life cycles.
+              <br />
+              <span className="text-sm font-light">Source: Gartner</span>
+            </p>
+            <button className="mt-4 bg-white text-[#1A1B4B] font-semibold px-6 py-2 rounded-lg hover:bg-gray-200 transition">
+              Learn More
+            </button>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default WhyUs;
