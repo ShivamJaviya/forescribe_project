@@ -28,7 +28,7 @@ const LoginPage = () => {
         x: {
           repeat: Infinity,
           repeatType: "mirror",
-          duration: 30,
+          duration: 5,
           ease: "linear",
         },
       },
@@ -43,7 +43,7 @@ const LoginPage = () => {
         x: {
           repeat: Infinity,
           repeatType: "mirror",
-          duration: 30,
+          duration: 5,
           ease: "linear",
         },
       },
