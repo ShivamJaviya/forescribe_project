@@ -44,27 +44,6 @@ http://localhost:3000
 
 ---
 
-## 📂 Project Structure
-```
-forescribe-ai-website/
-│
-├── public/               # Static assets (images, icons, etc.)
-├── components/           # Reusable components (Header, Footer, etc.)
-├── pages/                # Main application pages
-│   ├── index.tsx         # Home page
-│   ├── sign.tsx          # Sign-in/Sign-up page
-│   ├── whyus.tsx         # Why Us page
-│   ├── clients.tsx       # Clients page
-│   ├── careers.tsx       # Careers page
-│   ├── contactus.tsx     # Contact Us page
-│   └── blog.tsx          # Blog section
-│
-├── styles/               # Tailwind configuration and global styles
-└── types/                # TypeScript types and interfaces
-```
-
----
-
 ## 🖼️ Page Details
 
 ### 1. Sign-Up Page ✍️
