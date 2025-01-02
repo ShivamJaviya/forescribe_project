@@ -5,12 +5,12 @@ import Link from "next/link";
 import React from "react";
 import { HiArrowLeftOnRectangle } from "react-icons/hi2";
 
-const USER_IMAGE: string =
-  "https://res.cloudinary.com/dknvsbuyy/image/upload/v1686314044/1617826370281_30f9a2a96a.jpg";
+// const USER_IMAGE: string =
+//   "https://res.cloudinary.com/dknvsbuyy/image/upload/v1686314044/1617826370281_30f9a2a96a.jpg";
 
-interface HeaderProps {}
 
-const Header: React.FC<HeaderProps> = () => {
+
+const Header: React.FC = () => {
   return (
     <div
       className="flex justify-between items-center px-6 py-4 shadow-md bg-white rounded-full

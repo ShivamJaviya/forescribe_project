@@ -23,7 +23,7 @@ const LoginPage = () => {
   const slidingAnimation = {
     initial: { x: 0 },
     animate: {
-      x: [-100, 0], // Slide from -100% to 0%
+      x: [-100, 0], 
       transition: {
         x: {
           repeat: Infinity,
@@ -38,7 +38,7 @@ const LoginPage = () => {
   const slidingAnimationReverse = {
     initial: { x: 0 },
     animate: {
-      x: [0, -100], // Slide from 0% to -100%
+      x: [0, -100],
       transition: {
         x: {
           repeat: Infinity,
@@ -56,7 +56,7 @@ const LoginPage = () => {
       <div className="absolute w-full h-full p-7 opacity-30">
         <motion.div
           className="grid grid-cols-7 gap-3"
-          style={{ width: 'max-content' }}
+          style={{ width: "max-content" }}
           {...slidingAnimation}
         >
           {cardData.slice(0, 7).map((card, index) => (
@@ -76,7 +76,7 @@ const LoginPage = () => {
 
         <motion.div
           className="grid grid-cols-7 gap-3 mt-3"
-          style={{ width: 'max-content' }}
+          style={{ width: "max-content" }}
           {...slidingAnimationReverse}
         >
           {cardData.slice(7).map((card, index) => (
@@ -98,37 +98,37 @@ const LoginPage = () => {
       {/* Purple Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
 
-      {/* Login Modal */}
+      {/* Login Modal with Glass Effect */}
       <motion.div
-        className="bg-white bg-opacity-90 rounded-xl shadow-xl p-8 max-w-md w-full z-10"
+        className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-xl p-8 max-w-md w-full z-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <h1 className="text-2xl font-bold text-center text-gray-800 mb-4">
+        <h1 className="text-2xl font-bold text-center text-gray-100 mb-4">
           Welcome to Forescribe
         </h1>
         <div className="flex flex-col gap-4">
           <Link
-            href="/home"
+            href="/"
             className="flex items-center justify-center bg-[#4285F4] text-white font-medium py-2 px-4 rounded-lg hover:shadow-lg transition-all duration-300"
           >
             <span className="mr-2">G</span> Continue with Google
           </Link>
           <Link
-            href="/home"
+            href="/"
             className="flex items-center justify-center bg-gray-800 text-white font-medium py-2 px-4 rounded-lg hover:shadow-lg transition-all duration-300"
           >
             <span className="mr-2">M</span> Continue with Microsoft
           </Link>
         </div>
-        <p className="text-sm text-gray-600 text-center mt-4">
+        <p className="text-sm text-gray-300 text-center mt-4">
           By clicking Continue, you agree to our{" "}
-          <Link href="/terms" className="text-blue-600 hover:underline">
+          <Link href="/terms" className="text-blue-400 hover:underline">
             Terms & Conditions
           </Link>{" "}
           and{" "}
-          <Link href="/privacy" className="text-blue-600 hover:underline">
+          <Link href="/privacy" className="text-blue-400 hover:underline">
             Privacy Policy
           </Link>
           .
@@ -136,11 +136,11 @@ const LoginPage = () => {
       </motion.div>
 
       {/* Footer */}
-      <div className="">
-        <p className="text-sm">
+      <div className="absolute bottom-4">
+        <p className="text-sm text-gray-400">
           {" "}
-          <a href="mailto:support@forescribe.com" className="text-blue-400 underline">
-           
+          <a href="mailto:support@forescribe.com" className="underline">
+            support@forescribe.com
           </a>
         </p>
       </div>

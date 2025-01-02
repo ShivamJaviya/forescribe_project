@@ -28,7 +28,7 @@ const ContactUs: React.FC = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-            Tell us what's happening
+            Tell us what&apos;s happening
           </h2>
           <form className="space-y-6">
             <div>

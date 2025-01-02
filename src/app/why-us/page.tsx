@@ -48,12 +48,12 @@ const WhyUs: React.FC = () => {
                 wisely.
               </p>
               <p className="text-gray-200 mb-4">
-                <strong>Scalability:</strong> Forescribe's insights assist in making
+                <strong>Scalability:</strong> Forescribe&apos;s insights assist in making
                 informed decisions about scaling the software stack as the company
                 grows.
               </p>
               <p className="text-gray-200 mb-6">
-                <strong>Data-Driven Growth:</strong> By leveraging Forescribe's
+                <strong>Data-Driven Growth:</strong> By leveraging Forescribe&apos;s
                 data-driven insights, early-stage organizations can grow sustainably.
               </p>
               <a
@@ -114,7 +114,7 @@ const WhyUs: React.FC = () => {
               </p>
               <p className="text-gray-200 mb-4">
                 <strong>Workflow Efficiency:</strong> Streamline operations and
-                improve productivity using Forescribe's software stack insights.
+                improve productivity using Forescribe&apos;s software stack insights.
               </p>
               <p className="text-gray-200 mb-6">
                 <strong>Resource Allocation:</strong> Allocate resources effectively to
@@ -151,7 +151,7 @@ const WhyUs: React.FC = () => {
                 software tools for improved productivity and reduced complexity.
               </p>
               <p className="text-gray-200 mb-6">
-                <strong>Strategic Decision-Making:</strong> Leverage Forescribe's
+                <strong>Strategic Decision-Making:</strong> Leverage Forescribe&apos;s
                 insights to align software investments with business objectives.
               </p>
               <a

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type BlogPost = {
   id: number;
@@ -58,7 +59,7 @@ const Blog: React.FC = () => {
   const [posts, setPosts] = useState(blogPosts);
   const [likedPosts, setLikedPosts] = useState<number[]>([]);
 
-  // Load liked posts from localStorage on component mount
+
   useEffect(() => {
     const storedLikes = localStorage.getItem("likedPosts");
     if (storedLikes) {
@@ -67,10 +68,10 @@ const Blog: React.FC = () => {
   }, []);
 
   const handleLike = (postId: number) => {
-    // Check if the post has already been liked
+
     if (likedPosts.includes(postId)) return;
 
-    // Update likes and store in localStorage
+
     const updatedPosts = posts.map((post) =>
       post.id === postId ? { ...post, likes: post.likes + 1 } : post
     );
@@ -118,7 +119,7 @@ const Blog: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               {/* Blog Image */}
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
                 className="w-full lg:w-1/3 object-cover h-64 lg:h-auto"

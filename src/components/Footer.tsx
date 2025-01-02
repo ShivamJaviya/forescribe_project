@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 type SocialMediaLink = {
@@ -73,7 +74,7 @@ const Footer: React.FC = () => {
           <div>
             <h1 className="text-2xl font-bold">Forescribe</h1>
             <p className="mt-4">
-              Empowering businesses' Finance and IT to thrive with advanced
+              Empowering businesses Finance and IT to thrive with advanced
               digital infrastructure and seamless SaaSOps management.
             </p>
           </div>
@@ -129,7 +130,7 @@ const Footer: React.FC = () => {
               key={idx}
               className="transition-all duration-300 transform hover:scale-110 hover:rotate-6 hover:shadow-xl"
             >
-              <img src={icon} alt={alt} className="h-8" />
+              <Image src={icon} alt={alt} className="h-8" />
             </a>
           ))}
         </div>
@@ -144,7 +145,7 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="transition-transform duration-300 transform hover:scale-110"
             >
-              <img src={icon} alt={alt} className="h-10" />
+              <Image src={icon} alt={alt} className="h-10" />
             </a>
           ))}
         </div>
