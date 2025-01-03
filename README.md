@@ -81,7 +81,6 @@ The **Sign Page** is one of the most intricate sections, featuring:
 
 ### 6. Contact Us Page 📞
 - Interactive form with real-time validation.
-- Embedded map with draggable pins.
 - Social media links with hover effects.
 
 ---
